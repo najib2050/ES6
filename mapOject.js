@@ -104,6 +104,6 @@ let valueEl=""
 for(eachValue of fruits.values()){
    valueEl +=eachValue +` `
 }
-console.log(valueEl);
+console.log(valueEl); //500 300 200 
 
 
