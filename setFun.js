@@ -31,10 +31,3 @@ room.add(c)
 
 
 
-function order(name,multiplication){
-      console.log(name,multiplication(4,6));
-
-}
-order("ali noor",function(a,b){
-      return a*b
-})
