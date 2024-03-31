@@ -62,7 +62,7 @@
  * what is the important of event handelers
  *      they enable interactive wb app by responding tto usser inputs i.e mouse clck, keyboard pressor changes in form elements
  * how to handle event handlers
- *      there are two recommended approaches for handeling 1: using Property event handler 2: using AddEventListener
+ *      there are two recommended approaches for handeling 1: using Property event handler 2: functinal event handler using AddEventListener
  * 
  * USING PROPRTY EVENT HANDLERS
  * - By convention js obj that fire events have corresponding onevent property
@@ -121,5 +121,89 @@ btn2.addEventListener("click",greet2)
 /**
  * EVENT PROPERGATION
  * Propergation => describes the process by which events move though the document object module
+ * =>an event traverse each node in the DOM until its final destination or diliberatly halted
+ * evenmt propergation is a mechanisim that defines how events propagate or travel through the DOM TREE IN WEB
+ * 
+ * TYPES OF EVENT PROPERGATION
+ * 1: event Bubbling;
+ * 2: event capturing
+ * 
+ * EVENT-BUBBLING
+ * 
+ * is methode in event propergationwithin the HTML DOM API
+ * the process operaties on the principle that whenever an evnt occurs on an element, event handlers are first
+ * invoked on that element then on its parent and subsequently on all ancesstors elements in the hierarchy
+ * for instance consider that element X contains elementY and elemet X is clicked
+ * in such case the click event activates the event on elment X which then bubbles up to trigger event on elemnt Y
+ * addEventListener(eventType,Action,userCapure)
+ * eventType=>refers to the spacific type of event that initiate the action
+ * action => refers to designated task to be excuted when the event is triggered
+ * userCapture=> this is Boolean value denotes the phase of an event by defout this value is set to false indicating that the evet is in te bubbling phase
  */
+//DEMO
+const grandParent=document.querySelector(".grandParent");
+const Parent=document.querySelector(".parent");
+const child=document.querySelector(".child");
 
+grandParent.addEventListener("click",()=>{
+   console.log("grand parent element clicked");
+});
+Parent.addEventListener("click",()=>{
+   console.log("parent element clciked");
+})
+child.addEventListener("click",()=>{
+   console.log("child element clicked")
+})
+
+/**
+ * EVENT CAPTURING
+ * it sometimes refered to as trickle-down is the oposite of bubling.
+ * addEventListener(eventTpe,action.userCaptur)
+ */
+//DEMO
+const grandParentC=document.querySelector(".grandParentC");
+const ParentC=document.querySelector(".parentC");
+const childC=document.querySelector(".childC");
+
+grandParentC.addEventListener("click",()=>{
+   console.log("grand parent element clicked");
+},true);
+ParentC.addEventListener("click",()=>{
+   console.log("parent element clciked");
+},true)
+childC.addEventListener("click",()=>{
+   console.log("child element clicked")
+},true)
+
+/**
+ *    STOP PROPERGTION
+ * sometimes we may want to stop the propergation of event to parent it from reaching element higher or lower in the DOM hierarchy
+ * it can be achieve using stopPropergation() method
+ * inside the listner func  event.stopPropergation() is called preventing it from further propergation
+ * 
+ * 
+ */
+// DEMO
+document.getElementById("btn").addEventListener("click",function(event){
+   console.log("button clciked")
+   event.stopPropagation()
+
+})
+document.getElementById("outer").addEventListener("click",function(event){
+   console.log("outer is cliked")
+})
+document.getElementById("inner").addEventListener("click",function(event){
+   console.log("inner is clicked")
+});
+
+/**
+ * EVENT BROWSER MONITORING AND COMPATIBILITY;
+ * the monitorEvents() method in browsers eneables user to track various events happening on HTML element
+ * the funct requires the elemn as its argument and record every along with its details on the browser;s console.
+ * for instance in the following scenario the user is monitoring all click occurring on a button element using the monitoring monitorEvent() method
+ * 
+     monitorEvents(btn,"click")
+
+   to stop monitor events you can use unmonitorEvents() func
+   unmonitorEvents(btn,"click")
+ */

@@ -7,6 +7,22 @@
 </head>
 <body>
    <button class="btn">click me!</button>
+   <div class="grandParent">grand parent
+      <div class="parent"> parent
+         <div class="child">child</div>
+      </div>
+   </div>
+   <div class="grandParentC">grand parent C
+      <div class="parentC"> parent C
+         <div class="childC">child C</div>
+      </div>
+   </div>
+   <h1>stopping event propergation</h1>
+   <div id="outer">outer
+      <div id="inner">inner
+         <button id="btn">clcik</button>
+      </div>
+   </div>
 </body>
 <script src="/eventHndling.js"></script>
 </html>
