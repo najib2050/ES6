@@ -207,3 +207,46 @@ document.getElementById("inner").addEventListener("click",function(event){
    to stop monitor events you can use unmonitorEvents() func
    unmonitorEvents(btn,"click")
  */
+
+
+   // quiz
+   /**
+    * in js which method is used to attach an event-handler to an HTML element?
+    * an: addEventListener()
+    * which is the default event propagation method in the DOM
+    * an: bubbling
+    * During event propergation in the DOM in which phase does the event move from the outermost element to the target element
+    * an: capturing phase
+    * in js which obj contains information about the event?
+    * an: event
+    * which browser introduced the addEventListener() method for event handling injs
+    * mozila firefox
+    * these are the following types of browser event types
+    * an: clcik ,input,keydown etc
+    * Consider the following JavaScript code snippet:
+     document.getElementById('btn').addEventListener('click', function() {
+    console.log('Button clicked!');
+});
+What does this code do?
+an: attach a click event handler to the element with ID "btn"
+      <div id="outer">
+  <div id="inner">
+    <button id="btn">Click me!</button>
+  </div>
+</div>
+What is the event propagation order when the button is clicked?
+0 Marks
+an: capturing phase? target phase? bubbling phase
+document.getElementById('btn').addEventListener('click', function(event) {
+    event.stopPropagation();
+    console.log('Button clicked!');
+});
+What does event.stopPropagation() do?
+an: tops the event from propagating to other elements.
+
+document.getElementById('btn').addEventListener('click', function(event) {
+    console.log(event.target);
+});
+What does event.target refer to?
+    * an:the element that triggered the event
+    */
