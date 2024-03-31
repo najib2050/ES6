@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>form validation</h1>
+   <!-- /**
+ * FORM VALIDDATUION
+ * foem valiation occurs on the server side verify the details given by the user
+ * it sue to make sure the data is coorect and clean
+ * it allow you to veriify the data b4 sending to the server
+ * some commonly used validation task are
+ *    1: to ensure the required fields are filled
+ *    2: to ensure the user has enterd a valid sate
+ *    3: to ensure that the user has entered numbers in numeric fields
+ *    4: to ensure that the user has entered valid email
+ * the required attribute of the HTML input tag makes the input field mandotery 
+ * 
+ */ -->
+ <h1>text</h1>
+ <div id="root">
+   <form  name="myForm" onsubmit="validate()" >
+      Name:<input type="text" name="name" >
+      <input type="submit" value="submit">
+   </form>
+ </div>
+<h1>number</h1>
+<div id="root2">
+   <form  name="myForm2" onsubmit="validate2()" >
+      Nunmer:<input type="number" name="contact" >
+      <input type="submit" value="submit">
+   </form>
+ </div>
+</body>
+ <script type="text/javascript">
+       function validate(){
+         var x=document.forms["myForm"]["name"].value;
+         if(x==""){
+            alert("name cant be empty")
+            return false;
+         }else{
+            let sth=x //anything u writes in the input i.e najiib
+            let value="form submmited successfully";
+            document.getElementById("root").innerHTML=sth;
+         }
+       }
+
+       // number
+       function validate2(){
+   
+         let y=document.forms["myForm2"]["contact"].value;
+         if(isNaN(y) || y==""){
+            alert('please enter number')
+            return false;
+         }else{
+            let value="submitted succsfully"+" "+y;
+            document.getElementById("root2").innerHTML=value;
+         }
+       }
+ </script>
+</html>
