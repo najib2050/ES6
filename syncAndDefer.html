@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>asyn and defer</title>
+</head>
+<body>
+   <!-- 
+      async -> it decide how passing in engine occur
+      WITHOUT AYNC
+      html parsing bigins
+      this pasing will stop the moment it encounters a js, start downloading it
+      excution is started.
+      we will resume HTML parsing
+
+      WITH ASYNC
+      html parsing starts
+      but the moment it ecnounters a js it will not stop html parsing
+      html will be parsed and js will be downloaded simultaniously
+      once js is downloaded the HTML parsing stops and js axcution begins
+      now when js excution stops
+      HTML parsing continued
+    -->
+    <!-- 
+      DEFER
+      the deference btw defer and async is the way it is regulated
+
+      in Defer :-
+      html parsing begins
+      js is encounted
+      js will start downmloading and html be parsed simultaniously
+      html parsing will continue at some point in time
+      once html parsing is completed then only we will start js excution
+
+      what is js liberary i.e jQuery
+
+      what is the difference between a libery and frame work
+      liberary=> is prewritten code 
+
+      can web framwork and liberary work together
+     -->
+   <script async defer></script>
+</body>
+</html>
