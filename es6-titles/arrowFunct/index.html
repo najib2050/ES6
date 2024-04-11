@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>arrow function</title>
+</head>
+<body>
+   <!-- 
+      arrow function will reduce the lenght of the syntax
+      there is no binding of the this keyword in these functions
+      in arrow func, this keyword always represent the object that defined the arrow function
+      if there is only one line of code you can ignor the btackets and return the keyword of the fun
+
+      syntext
+      function = () => {
+         block code
+         return  value
+      }
+    -->
+   <script type="text/javascript">
+      const div =(a,b,c)=>a/b;
+      document.write("div using arrow function"+ ` `+ div(7,10))  // 0.7
+   </script>
+</body>
+</html>
