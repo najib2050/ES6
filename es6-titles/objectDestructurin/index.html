@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   -object destructuring allows you to extract properties from object and bind them in varaiale
+   -there are two ways of object destrcuturing.
+      1:using dot(.) operator
+      2:by assigning proeties of an object to variables
+      
+      syntax
+
+      keyword variableName=objectNmae.property;
+      kewword{propertyName,...propertyN} = onjectName;
+
+      example
+
+      var rno=studObj.rollNo;
+      let {rollNo,name}=studObj;
+   <script type="text/javascript">
+             const studObj={
+               rno:"101",
+               name:"alex"
+             }
+             //old ways
+             const roll=studObj.rno;
+             console.log("roll number"+ ` `+roll)
+
+             //new way
+
+             const {rno,name}=studObj;
+             console.log(`value using new way ${rno} ,${name}`)
+   </script>
+</body>
+</html>
