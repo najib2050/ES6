@@ -1,0 +1,30 @@
+1:how do arrow function dffer from traditional function
+ans: the traditional fun has this keyword while arrow function do not have their own this keyword
+
+2:what si templete string in es6?
+ans: away of embed exprestion in string.
+
+3:what is the result of using let whithin the loop ines6?
+anS:creates a variable only in loop scope.
+
+4:what is the purpose of the spread operator in function calls?
+ans: to an arroy as indivitual argument.
+
+5: in js form validation what does the reuired attribute do?
+ans: makes a form field mandotory to fill.
+
+6: how does arrow function handle argumens?
+ans:usng rets parameters.
+
+7:what is obj destructuring primarily used for?
+ans: to extarct properties from object.
+
+8:what does spread operator do in es6?
+ans:slits an array into single elements
+ans:combines multiple arrays into one.
+
+9:what does constant keyword i es6 signify?
+ans: a varaible that cannot be reassigned.
+
+10: how does the rest operator differ from the spread operator?
+ans: rest creates a list while spread divides a list.
