@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   the rest operator i js allows a func to accet an indefinite of arguments as an array
+   providing a way to represnt variadic function in js
+   it simplifies handing multiple argument in fun leading to clear and more adaptable code
+   <script type="text/javascript">
+      
+      const sum=(a,...b)=>{ //rest operator will take an infinite number of values and store them in array.
+         let sum=0;
+         for (let value of b){
+            sum=sum+value
+         }
+         return sum+a //12
+      }
+      let rest=sum(7,4,1)
+      console.log(rest)
+   
+   </script>
+</body>
+</html>
