@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <!-- 
+      spread operator 
+      is 3 dots with name or label attach to it
+      the js spread operator (...) allow us to quickly copy all or part of an existing array or object into another array or obj
+      the spread operator is often used in combination within destructuring
+      appliction of spread operator
+            copping array or object
+            cloning array or object
+      
+      stytax
+      [...iteravleObj, item, ...,itemN] => for array literals
+      [...iterableObj, "items", ..."itemN"] => for string literals
+      func(...iterableObj) => passing iterable obj to funtion
+      {...ob} => for array literals
+
+
+    -->
+    <script type="text/javascript">
+      
+      let arr1= [1,2,3];
+      let arr2=[4,5,6]
+
+      //copying arrays using spread
+      let big=[...arr1, ...arr2]
+
+      //cloning athe rray
+      let arr3=big;
+      document.write(big) //,2,3,4,5,6
+      big.push(10)
+      //will affect both the arr3 and big
+      document.write(`value of big ${big} and arr ${arr3}`) //1value of big 1,2,3,4,5,6,10 and arr 1,2,3,4,5,6,10
+
+     //exp list of names
+     function lisNames(...names){
+      console.log(names) // rints emty array []
+      
+     }
+     lisNames()
+     function lisNames2(...names){
+      console.log(names) //(4) ['najiib', 'ali', 'awale', 'john']
+
+     }
+     lisNames2("najiib","ali","awale","john")
+
+     //rest opreator use to colect the ret of the item
+     function lisNames3(argenName,...names){
+      console.log(argenName,names) //najiib (3) ['ali', 'awale', 'john']
+
+     }
+     lisNames3("najiib","ali","awale","john")
+
+     const number=[1,2,3,4]
+     const number2=[...number,5,6,7]
+     console.log(number2)
+     //obj and array integration => helps use to chenge array into obj but nor obj to array
+     const grocerirs=['banana',"tomato","mongo","avocado"]
+     const objectGrocerirs={
+      ...grocerirs,
+        kind:"clove"
+     }
+     console.log(objectGrocerirs)
+
+     const identity={
+      fistName:"najiib",
+      lastName:"aden",
+      age:33,
+      color:"black"
+     }
+     const najiib={
+        ...identity,
+      color:"green",
+     }
+     console.log(najiib)
+
+
+
+   
+
+    </script>
+</body>
+</html>
