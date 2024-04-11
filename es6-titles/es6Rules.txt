@@ -1,0 +1,39 @@
+in js es6 (also called ECMAscript 2015) defines a new set of rules governing the syntax od the
+js code.
+
+features                            description
+
+
+let and const keywords       => these are used to create block leveal variables
+arrow function               =>it reduces the length of the code for creating a function
+classes                      => these are the templete to create objection
+default paremeter values     => it allows us to passthe argument through a function by default
+find() and findIndex() method =>it hels you to find the element or index of an array
+exponentiation (**)     => it raises the fisr operand to the power of the second operand
+
+
+DEFERENCE BETWEEN ES5 AND es6
+es5 and es6 are scripting language standard byECMA international,
+ 
+secification                            es5                                     es6
+edition                                fifth edition released in 2009            sixth edition released 2016
+datatypes                              supports primitive data types(string,     in addition to the es5 primitivr datatypes it
+                                       number , boolean null and undefine)       suppports new datatypes (symbol)
+variables defination                   in es5 we define the variable using only var   in es6 there are three ways to define a variable with var let and const
+                                       keyword
+
+arrow function                           not supported in ES5
+                                       supported ines6
+
+default parameter                       not supported                             supported
+templete string                         not suppored                                supported
+object destructuring                    not suppored                                supported
+
+
+VAR , LET AND const
+
+behaviour                 var                   let                  const
+
+hoisting              exhibit hoisting         no                      no
+scope                 functional scope           block scope            block scope
+mutabilty             mutable                   mutable                 unmutable
