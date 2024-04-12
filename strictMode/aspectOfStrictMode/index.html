@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   ASPECT of strcit mode.
+
+   -hear are the key asppects of using js strcit mode to enhance code realibility and prevent common.
+
+   FEATURES                                              DESCRIPTION
+
+  1: errors for undeclared variable                      throws errors if variables are ot properly declared befor use.
+  2:applies to object.                                   prevents initializing undeclared objects as objects are considered varaiables.
+  3:duplicate function parameters                        -triggers error for functions with parameters sharing the same name.
+  4:deletion of function/object.                         -prohibits deleting func or object enforcing stricter hanling.
+  5:restricted keyword.                                  -generates errors when reserved keywords are used as variable name such as eval or "arguments"
+  
+</body>
+<script type="text/javascript">
+   //1:example: when using an undefined varaiable in js it doesnt encounter any error but after using strict it will encounter an error.
+   "use strict"
+   console.log(x) //index.html:63 Uncaught ReferenceError: x is not defined
+    //at index.html:63:16
+   
+
+   //w2:hen using an undefined variable inside a function in js it doesnt encounter any arror but after using "USE STRICT". IT WILL ENCOUNTER  AN ERROR.
+   function show(){
+      y=10
+      console.log(y)
+   }
+   show()
+
+   //3:strict mode displays an error when using the name for multiple parameters in fun defination.
+
+function duplicateParam(x,x){// error duplicate name "x"
+
+}
+  //4: strict mode displays an error when using octal literals with leading zero.
+  var octalNum=0655; //error octal literals are not allowed in strict mode.
+  
+</script>
+</html>
