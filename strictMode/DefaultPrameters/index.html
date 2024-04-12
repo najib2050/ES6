@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   DEFAULT PARAMETERS.
+
+   default parameters enable you to assing a predetermined value to a function's formal parameter
+   when no value is provided during the functional call.
+   - introduced in ECMAScript 2015 (ES6) dafault parameters avoid undefined errors enhance functionality and user experiance.
+
+   syntax
+
+   fucntion fnName(param1=dafaulyValue1,..., paramN=dfaultvalueN){}
+</body>
+<script type="text/javascript">
+
+     "use strict"
+   const sum=(a=5,b=2) => a+b;
+
+   console.log(`sum using dafault param ${sum(9,10)} `)
+   console.log(sum())
+
+
+
+   function edurekaFun(i =33) {
+      console.log(typeof(i))
+      console.log("the value of i is : " + i)
+      
+   }
+   edurekaFun()
+   edurekaFun(undefined)
+   edurekaFun("")
+   edurekaFun(null)
+
+</script>
+</html>
