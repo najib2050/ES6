@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   strict mode for fucntions
+
+   -strict mode in js can also be applied to indivitual functionby placing the use strcit ststement at the beging of the function.
+   -it enforce s strict rules within that fuc's scope only.
+   -modules are in strict mode by default.
+   -strcit mode does not apply to code written between baces({})
+
+   <script type="text/javascript">
+      function myStrictFunc(){
+         //function level strict mode syntax
+         "use strict";
+         function nested (){
+            return "and so am i";
+
+         }
+         return `hi iam strict mode fun ${nested()} `;
+      }
+      myStrictFunc()
+
+      function myNotStrcit(){
+         return "iam not strict";
+      }
+      myNotStrcit()
+   </script>
+</body>
+</html>
