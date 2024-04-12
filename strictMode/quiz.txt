@@ -1,0 +1,44 @@
+1: what does "use strict" do in js file?
+ans: enable strict mode.=>ecausing silent errors to throw and helps in wriing a clear cos
+2:what is the output  of the following code with strict mode enabled ? 
+function foo(n){
+   let n;
+   return n;
+}
+ans: throws a syntaxError=>declaring a variable twice throws sytaxError in strict mode.
+3:what is the result of calling 
+function foo(a,b=5){
+      return a+b
+}
+foo(2)
+ans: 7=>the default parameter b takes the value 5 when not explicitly passed so the result is 7
+
+4: if function is defied as 
+function sum(a,b=a){
+
+}
+what is the result of sum(3)
+ans: 6=>the default parameter b is set to the value of a so the result is 6.
+
+5:when does default parameter is evalauted in js?
+ans: default parameter are evaluated at call time=>default parameter are indeed evaluated at call time.
+
+6:how do you handle optional parameters in a function in strict mode?
+ans: by setting defaults in the dunction signature=> is the proper way to handle optional parameter.
+
+7:what is the correct way to log the value of this in strcit mode?
+ans: console.log(this)
+
+8:what is the effect of strict mode on arguments of a function?
+ans: arguments object's values are not updated on parameter chenge.
+
+9:what will be the folloeing code output in strict mode ?
+function sum(a,a,b){
+   "use strict"
+   return a+a+b;
+}
+console.log(sum(1,2,3))
+ans:syntaxError;
+
+10:WHICH FEATURE USE STRICT DISABLE?
+ans: the arguments object aliases with parameters.
