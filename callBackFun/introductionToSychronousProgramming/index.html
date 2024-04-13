@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>INTRODUCTION TO SYNCHRONOUSE PROGRAMMING</h1>
+   <P>
+      Synchronous programminmg means that computers perfome tasks sequently follwing the structure in the excact order they were provided.
+
+   </P>
+   <p>
+      consider the process of preparing a coffe with task such as boiling water, adding a coffe sachet, and adding sugar as per test.
+      boiling water =>adding coffee=>adding sugar.
+   </p>
+   <p>
+      just like tackling the kitchen task one by one waiting to complete each before starting the nect synchronouse programming ensures that a computer finishes one job before proceeding to the next.
+   </p>
+   <P>
+      this method simplifies the understanding and anticipation of the compuetr actions at nay momment.
+   </P>
+   <div>
+      // example of assynchronouse code in js 
+      //defimne the function
+      function task1(){
+         console.log("task 1")
+      }
+      function task2(){
+         console.log("task 2")
+      }
+      function task3(){
+         console.log("task 3")
+      }
+      task1()
+      task2()
+      task3() 
+      // autput: task 1,task 2, task 3;
+   
+   </div>
+   <p>
+      synchronouse programming may encouter issues, especially with operations that are time-consuming.
+   </p>
+   <p>
+      imagine a scenario where a synchronouse application needs to wait for a reply from an external serever, during this wait time, the application cant perfore any other actions - its essentially on hold until it receives the server response.
+   </p>
+   <p>
+      the situation known as blocking can make the application seem unresponsive or stuck /frozen to the user.
+   </p>
+
+</body>
+<script type="text/javascript">
+  
+  function someLongRunningFun(){
+   let start=Date.now();
+   console.log("start:"+start)
+   while(Date.now()-start <5000){
+      
+      //loop withou doing anything
+   }
+   return "hello"
+  }
+  console.log("starting ....")
+  let result=someLongRunningFun();
+  console.log(result);
+  console.log("...finishing")
+// in this a fore mentioned code snippet: 
+//the process kicks off with a starting ... message output to the console.
+//next it invoke someLongRunningFun() , mimicking a prolonged operation lasting 5 seconds during which the  program's subsequent excution is halted.
+//after fininshing the function returns Hello , which then gets printed to the console.
+//the sequence concludes with a finishing message in the console.
+
+//dusring excution of someLongRunningFunc(), which lasts 5 seconds the program unable to proceed to the next line rendering it unrespponsive.
+//the delay can significantly extend the program's overall runtime and negatively affect user exprience by making the application appear frozen.
+//by adopting asynchronous programming applications can continue to run other tasks without posing thus remaining responsive while waiting for long process to finish.
+
+
+</script>
+</html>
