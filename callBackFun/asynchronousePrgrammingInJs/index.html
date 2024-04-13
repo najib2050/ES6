@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>asynchronous programming in javascript</h1>
+   <p>
+      asynchronousprogramming => is a paradigm that allows code excution to proceed without having to wait for potentially long running operation to complet.
+
+   </p>
+   <p>
+      this is particularly used in tasks such as fetching data from a server reading files or queryung a database which can take significant time to complete.
+   </p>
+   <p>
+      it helps in creating responsive,fast,and efficient applications by allowing these time-consuming operations to run in the background thereby not blocking the main thread of excution
+   </p>
+   <p>
+      js implements asynchronous programming through several mechanisms
+
+      1:callbacks
+      2:promises
+      3:asyn/await.
+   </p>
+   <div>
+      synchronouse
+      task1 >task2 >task3 >task4 > time taken 28s
+      10s    7s       5s      6s
+
+      asynchronous
+      task1 >task2 >task3 >task4 =>time taken 10s
+      10s     7s      5s   6s
+   </div>
+</body>
+</html>
