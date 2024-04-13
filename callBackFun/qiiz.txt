@@ -1,0 +1,54 @@
+1:what does synchronous programming implies?
+ans: code excution that waits for an operation to complete before moving to the next one.
+
+2:how does asychronouse programming improve webapplication performancy?
+ans: by allowing multiple operations to run concurrenctly without the main thread.
+
+3:what is the common problem associated with deep nesting of asynchronouse callback?
+ans: callback hell or pyramid of dom
+
+4:which js feature helps in avoiing callback hell?
+ans: promises.
+
+5:what is the benefits of using asynchronouse programming models?
+ans: reducing resource consumption on the serevr.
+ans: performing long-running i/o operations without blocking the main thread.
+ans: allowing the application to remain responsive while waiting for operations to complete.
+
+6:What is the output of the following code snippet?
+function greeting(name){ 
+     console.log('Hello ' + name); 
+    } 
+function processUserInput(callback) { 
+    var name = 'John'; 
+    callback(name); 
+   } 
+processUserInput(greeting);
+ans: hello john.
+
+7:How does the following code illustrate a basic form of Callback Hell? 
+getData(function(a){ 
+   getMoreData(a, function(b){ 
+      getMoreData(b, function(c){
+          console.log('Got data: ' + c); 
+          }); }); });
+ans: by using nested callback function.
+
+
+8:How do you correctly call a higher-order function processData that takes a callback function as an argument to handle the result?
+ans: processData(result=>console.log(result))
+ans: processData(function(result){
+   console.log(result)
+})
+
+9:Given a higher-order function map that applies a callback to each element in an array, what does this code snippet do? 
+map([1, 2, 3], n => n * 2);
+ans:returns a new array [2,4,6]
+
+10:What will the following code snippet output?
+function repeat(operation, num) { 
+   if (num <= 0) return; operation();
+    repeat(operation, --num); 
+    } 
+repeat(() => console.log("Hi"), 3);
+ans:"hi" printed 3 times
