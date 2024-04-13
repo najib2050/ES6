@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>what is call back</h1>
+   <p>
+      imagin your in a coffe shop,ordering your favorite drinks instead of waitnig 
+      at the conter, you sit and prowse your phone. when you order's ready, the barista calls your name (acting as the callback)
+      for you to collect your drink and move on. this way you are idly waiting waiting but are free to engage in other activities.
+
+   </p>
+   <p>
+      in programming especially in js a callback works on a similar principle its a way to say. Hey go a head and do this task and when you done , let me know
+      by calling the functin(callback) while waiting  for the task to complete your program isnt just sitting  idler it can continue excuting other task.
+
+   </p>
+   <p>
+      a callback is a func that is passes to another fun as an argument
+   </p>
+   <p>
+      these functions are predominantly utilized in js for crafting asychroous code 
+   </p>
+   <p>
+      although  js typically excutes code in a sequential top-down manner certain sceario rewuire the code to excute in a specific sequency
+   </p>
+   <p>
+      callback functions facilitates the requirement embodying the essence of asynchronuse programming
+   </p>
+   <p>
+      functions that accept other function as arguments are termed higher-order fun
+   </p>
+   <div>
+      <p>
+         in the simplest terms a callback is a function that is passed as an argument to another function and is excuted
+         after some operation has been completed.
+         here's a very basic exmaple.
+         function greet(name,callback){
+            console.log("hi", name)
+            callback()
+      
+         }
+         greet("najiib",function(){
+            console.log("callback function is called")
+         })
+      -in the example the greet function takes a name and a callback fun as arguments. it first logs a greeting message using the name and then it calls the callback func which logs another message.
+      
+      </p>
+   </div>
+</body>
+<script type="text/javascript">
+   sum(3,2,function(result){
+      console.log("result:"+result)
+   })
+
+   function sum(a,b,callback){
+      let sum=0
+      sum=a+b;
+       callback(sum)
+   }
+   function greet(name,callback){
+      console.log("hi", name)
+      callback()
+
+   }
+   greet("najiib",function(){
+      console.log("callback function is called")
+   })
+
+</script>
+</html>
