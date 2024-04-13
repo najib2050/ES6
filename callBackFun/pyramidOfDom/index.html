@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>pyramid of dom</h1>
+   <p>
+      -callback offer a practical approache for managing assynchronouse task.
+      -ye the readability and complexity of the code can deteriorate when numerouse callbacks are nested within.
+      -this iaaue arises from linking several callbacks in succesion leading to layered, payramid shaped indentation pattern know as  CALLBACK HELL or the PYRAMID OF DOM.
+      -example:-
+   </p>
+</body>
+//-example
+<script type="text/javascript">
+   fetchData(function(a){
+      fetchMorData(a,function(b){
+         fetchEvenMoreData(b,function(c){
+            fetchEvenEvenMoreData(c,function(d){
+               fetchFinalData(d,function(finalData){
+                  console.log(finalData)
+               })
+            })
+         })
+      })
+   })
+//this structure resembling a pyramid is known as callback hell.
+</script>
+</html>
