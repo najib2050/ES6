@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>Attaching multiple handlers with promise</h1>
+   <p>
+      -a powerful feature of promise is their ability to have multiple handlers, enabling more complex and flexible asynchronouse flow control.
+      -A single promise can have multiple .the() or cach() handlers attached to it.
+      -we can attach multiple .the( )handlers to a promise each handler is excuted in the order they were added the value return from a .the() handler
+      is passed to the enxt .then() handler in the chain.
+      -by using multiple .cach() handlers you can provide layered error handling, where each handlers can deal with specific types of errors or perfome cleanupp actions.
+              
+                   new Promise()
+                   /         /
+                  /          /
+               .then()     .then()  .then()
+               
+   </p>
+</body>
+</html>

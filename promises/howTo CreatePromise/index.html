@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>HOW TO CREATE A PROMISE</h1>
+   <p>
+      -the following program creates a promise object that accepts two functions:RESOVE() for succefull completion and reject() foe errors.
+      -in the following program if the countvalue is tre the promise will be fullfiled.
+   </p>
+</body>
+<script type="text/javascript">
+   const  count=true;
+
+   let countValue=new Promise(function(resolve,reject){
+      if(count){
+         resolve("count value is true")
+      }else{
+         reject("count value is flase")
+      }
+   })
+   console.log(countValue) //romise {<fulfilled>: 'count value is true'}
+</script>
+</html>

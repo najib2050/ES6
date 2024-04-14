@@ -1,0 +1,50 @@
+1:how to create promise?
+ans:new Promise()
+reason:A Promise is created using the constructor new Promise()
+
+2:what happen when a promise excutor throws an error?
+ans:the promise is rejected automatically.
+reason:if an error is thrown in  the excutor function, the promise i automatically rejected with that error.
+
+
+3:What does this code snippet do? 
+     new Promise((resolve, reject) => reject('Error')).catch(console.log)
+ans:Logs an error to the console
+reason:The code snippet rejects the Promise with 'Error', and the .catch() method logs it to the console.
+
+4:What is the initial state of a Promise?
+ans:pending
+reason:The initial state of a Promise is Pending.
+
+5:What does the following code output? 
+   new Promise((resolve, reject) => {
+       resolve('Resolved!'); console.log('A'); 
+       }).then(res => console.log(res));
+ans:A, then Resolved;
+reason:The code outputs 'A', then 'Resolved!'. The console.log('A'); runs immediately, and console.log(res); runs after the promise resolves.
+
+
+6:What will the following code snippet return? 
+   Promise.resolve('Success').catch(err => console.log('Error')).then(res => console.log(res));
+ans:logs "success"
+reason:The code logs 'Success'. The catch block does not execute because the promise resolves, and the then block logs the resolution value.
+
+7:Which option correctly handles the promise rejection? 
+     new Promise((resolve, reject) => {
+       reject('Failed!'); })
+ans:.then(res => console.log(res)).catch(err => console.log(err));
+reason:Option 1 correctly handles the rejection by logging 'Failed!' through the catch method
+
+8:When is the catch() method used in Promises?
+ans:For handling any errors that occur in the promise chain
+reason:The catch() method is used for handling any errors that occur in the promise chain.
+
+
+9:How can you convert a callback-based function to a Promise-based one?
+ans:By wrapping the function in a new Promise()
+reason:You can convert a callback-based function to a Promise-based one by wrapping it in a new Promise().
+
+10:What will be the output of the following code? Promise.resolve(5).then(x => x*2).then(x => console.log(x))
+ans:10;
+reason:The code first resolves a Promise with 5, then multiplies it by 2 in the first .then(), resulting in 10 being logged.
+

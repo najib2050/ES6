@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>Handling promises using then() block </h1>
+   <p>
+      -the THEN() methode is applied algside a callback fun when a promise is succesfully resolved.
+      -it takes up to two arguments which are callback functions for the fullfilled and rejected cases respectively.
+      -then() method can return either a value or new promise.
+   </p>
+   <h2>example</h2>
+   <p>wait 4 second (4000 millisecond) for this page to chenge</p>
+   <div id="demo"></div>
+</body>
+<script type="text/javascript">
+   const myPromise=new Promise(function(resolve,reject){
+      setTimeout(function(){
+         resolve("najiib ...........")
+      },5000)
+   })
+   myPromise.then((value)=>{
+      document.getElementById("demo").innerHTML=value;
+   })
+</script>
+</html>

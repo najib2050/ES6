@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>Handling promises using catch() block</h1>
+   <p>the catch method is employed alongside a callback for handling situations when the promise is either rejected or enounters an error
+      -in the following program the promise gets rejected. the catch() method accompanies the promise to manage the error.
+
+   </p>
+
+</body>
+<script type="text/javascript">
+
+   const count=true;
+   //return a promise
+   let myPromise=new Promise((resove,reject)=>{
+      reject("promise rejected")
+   })
+   //excute when promise is resoved succesfully
+   myPromise.then((result)=>{
+      console.log(result)
+   })
+   //excuteif there is an error;
+   myPromise.catch((result)=>{
+      console.log(result)
+   })
+
+</script>
+</html>
