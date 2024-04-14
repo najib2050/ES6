@@ -1,0 +1,31 @@
+1:How does Promise.allSettled() differ from Promise.all()?
+ans:Promise.allSettled() waits for all promises to settle regardless of the outcome.
+
+
+2:What does the Promise.race() method return?
+ans:A single promise that resolves or rejects as soon as one of the promises in the iterable resolves or rejects.
+
+3:What will be the output of Promise.resolve(123)?
+ans:It will return a Promise that resolves to 123.
+
+4:How can you transform a list of promises into a single promise that resolves when all of the promises in the list have resolved, or rejects as soon as one promise in the list rejects?
+ans:Using Promise.all()
+
+5What method would you use if you want to wait for the first fulfilled promise and ignore all the rejections unless all promises are rejected?
+ans:Promise.any()
+
+6:What will Promise.all([]) return?
+A promise resolved with an empty array.
+
+7:What happens if you pass non-Promise values to Promise.all()?
+ans:They are converted into resolved promises.
+
+8:What does the Promise.any() method return if all of the passed-in promises reject?
+ans:A rejected promise with an AggregateError.
+
+9:If Promise.race() is given an array of promises that all resolve, what determines the resolution value of the returned promise?
+ans:The value of the first resolving promise in the array.
+
+10:In the Promise API, which method is used to execute something whether the promise was resolved or rejected?
+ans:
+.finally()
